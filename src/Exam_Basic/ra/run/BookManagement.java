@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public class BookManagement {
     public static void main(String[] args) {
-        int choseMenu;
         Scanner scanner = new Scanner(System.in);
         List<Book> listBook = new ArrayList<>();
 
@@ -24,7 +23,7 @@ public class BookManagement {
             System.out.println("7. Thoát");
             System.out.println("**************************************************************************************************");
             System.out.println("Lựa chọn menu: ");
-            choseMenu = Integer.parseInt(scanner.nextLine());
+            int choseMenu = Integer.parseInt(scanner.nextLine());
             switch (choseMenu) {
                 case 1:
                     creatBook(listBook, scanner);
@@ -36,7 +35,7 @@ public class BookManagement {
                     sortByInterest(listBook);
                     break;
                 case 4:
-                    deleteBooks(listBook, scanner);
+                    deleteBook(listBook, scanner);
                     break;
                 case 5:
                     searchBook(listBook,scanner);
@@ -75,7 +74,7 @@ public class BookManagement {
         showBook(listSearch);
     }
 
-    private static void deleteBooks(List<Book> listBook, Scanner scanner) {
+    private static void deleteBook(List<Book> listBook, Scanner scanner) {
         Book book = new Book();
         showBook(listBook);
         System.out.println("Nhập mã sách cần xóa");
