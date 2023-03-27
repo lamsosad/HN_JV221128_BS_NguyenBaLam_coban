@@ -75,11 +75,10 @@ public class BookManagement {
     }
 
     private static void deleteBook(List<Book> listBook, Scanner scanner) {
-        Book book = new Book();
         showBook(listBook);
         System.out.println("Nhập mã sách cần xóa");
-        int idDel = Integer.parseInt(scanner.nextLine());
-        listBook.remove(idDel);
+        int idDelete = Integer.parseInt(scanner.nextLine());
+        listBook.remove(idDelete);
     }
 
     private static void sortByInterest(List<Book> listBook) {
